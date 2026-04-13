@@ -22,7 +22,7 @@ namespace Origin
             {
                 if(bindBehaviour == null)
                 {
-                    Log.Error("StartCoroutine {0} failed, bindBehaviour is null" , name);
+                    GameDebug.Error("StartCoroutine {0} failed, bindBehaviour is null" , name);
                     return null;
                 }
 
@@ -34,7 +34,7 @@ namespace Origin
             {
                 if(bindGo == null)
                 {
-                    Log.Error("StartCoroutine {0} failed, BindGo is null" , name);
+                    GameDebug.Error("StartCoroutine {0} failed, BindGo is null" , name);
                     return null;
                 }
 

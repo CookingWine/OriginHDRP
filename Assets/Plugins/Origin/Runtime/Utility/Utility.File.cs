@@ -45,7 +45,7 @@ namespace Origin
                         }
                         else
                         {
-                            Log.Error("文件夹不存在 Path=" + dir);
+                            GameDebug.Error("文件夹不存在 Path=" + dir);
                             return false;
                         }
                     }
@@ -81,7 +81,7 @@ namespace Origin
 #if UNITY_EDITOR
                             UnityEditor.EditorUtility.DisplayDialog("Tips" , "文件夹不存在" , "CANCEL");
 #endif
-                            Log.Error("文件夹不存在 Path=" + dir);
+                            GameDebug.Error("文件夹不存在 Path=" + dir);
                             return false;
                         }
                     }
@@ -139,7 +139,7 @@ namespace Origin
                 }
                 catch(Exception ex)
                 {
-                    Log.Error("to md5 fail,error:" + ex.Message);
+                    GameDebug.Error("to md5 fail,error:" + ex.Message);
                     return "Error";
                 }
             }

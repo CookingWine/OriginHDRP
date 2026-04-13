@@ -96,7 +96,7 @@ namespace Origin
                     var (isCanceled, _) = await unityWebRequest.SendWebRequest().WithCancellation(cts.Token).SuppressCancellationThrow();
                     if (isCanceled)
                     {
-                        Log.Warning($"HttpPost {unityWebRequest.url} be canceled!");
+                        GameDebug.Warning($"HttpPost {unityWebRequest.url} be canceled!");
                         unityWebRequest.Dispose();
                         return string.Empty;
                     }
@@ -105,7 +105,7 @@ namespace Origin
                 {
                     if (ex.CancellationToken == cts.Token)
                     {
-                        Log.Warning("HttpPost Timeout");
+                        GameDebug.Warning("HttpPost Timeout");
                         unityWebRequest.Dispose();
                         return string.Empty;
                     }
